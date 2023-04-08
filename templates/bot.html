@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chat-container">
+        <div id="chat-history">
+            <p>{{ prompt }}</p>
+        </div>
+        <form id="chat-form">
+            <input type="text" name="message" id="message" placeholder="Enter your message here">
+            <input type="hidden" name="state[]" id="state" value="">
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#chat-form').submit(function(event) {
+                event.preventDefault();
+                var message = $('#message').val();
+                var state = $('#chat-history p').map(function() {
+                    return $(this).text();
+                }).get();
+                $.ajax({
+                    url: '/process',
+                    method: 'POST',
+                    data: {
+                        message: message,
+                        state: state
+                    },
+                    success: function(response) {
+                        var chatHistory = $('#chat-history');
+                        chatHistory.append('<p>Human: ' + message + '</p>');
+                        chatHistory.append('<p>AI: ' + response + '</p>');
+                        $('#message').val('');
+                        $('#state').val(JSON.stringify(chatHistory.find('p').map(function() {
+                            return $(this).text();
+                        }).get()));
+                        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+                    }
+                });
+            });
+       
+        });
+    
