@@ -23,18 +23,4 @@ Run the website with a single command
 python routes.py
 
 ```
-Run the depression chatbot
-```
-python chatbot.py
-```
-Dataset Links:
-
-Healthy
-
-
-https://drive.google.com/drive/folders/18z0fNBP0cEeB0_kouqUi23kUzRuWhsRS
-
-Depressed
-
-https://drive.google.com/drive/folders/1yXy_0t4UIpdE53nAYMap0Y3-kNdWwzG0
 
