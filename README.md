@@ -16,7 +16,7 @@ Algorithms like SVM,CNN,LSTM etc can be used accordingly. This model can compreh
 A questionnaire with symptom based question is trained with ML to diagnose diseases using the symptom by asking the patients directly.
 
 
-Predict Depression using DTI-MRI Images using Machine Learning
+Predict Diseases diagnosis using Machine Learning
 
 Run the website with a single command
 ```
