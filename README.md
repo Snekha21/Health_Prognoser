@@ -1,4 +1,4 @@
-# Depression Prediction
+# Prediction of Diseases
 ## PROBLEM STATEMENT:
 According to WHO ( World Health Organisation ), there are 8 billion people in the World out of which 130 million people visit the ER (Emergency Room) every year for any illness, sickness and other issues. It takes a Physician, a family doctor, a specialist and a chief doctor to diagnose a disease and make a critical decision about the treatment process.
 Therefore, it takes an average of at least a day or two to diagnose a deadly disease within which the disease could have spread further and made even more damage.
